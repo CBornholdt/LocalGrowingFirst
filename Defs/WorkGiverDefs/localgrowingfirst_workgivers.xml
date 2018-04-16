@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <WorkGiverDef>
+        <defName>LocalGrowingHarvest</defName>
+        <label>harvest local crops</label>
+        <giverClass>LocalGrowingFirst.WorkGiver_LocalGrowingHarvest</giverClass>
+        <workType>Growing</workType>
+        <priorityInType>200</priorityInType>
+        <verb>harvest</verb>
+        <gerund>harvesting</gerund>
+        <scanThings>false</scanThings>
+        <scanCells>true</scanCells>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+        <defName>LocalGrowingSow</defName>
+        <label>sow local crops</label>
+        <giverClass>LocalGrowingFirst.WorkGiver_LocalGrowingSow</giverClass>
+        <workType>Growing</workType>
+        <priorityInType>150</priorityInType>
+        <verb>sow</verb>
+        <gerund>sowing</gerund>
+        <scanThings>false</scanThings>
+        <scanCells>true</scanCells>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+  </WorkGiverDef>
+</Defs>
