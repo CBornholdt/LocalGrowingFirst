@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>Local Growing First</name>
-	<author>YourName</author>
-	<targetVersion>0.18</targetVersion>
-	<description>V1
-    Adds extra jobs to Growing to ensure that local crops (within same zone) are harvested/sown first
+	<author>FuriouslyEloquent</author>
+	<targetVersion>0.18.0</targetVersion>
+	<description>
+    Ensures pawns will harvest/sow within their current growing zone before heading to others!
 	</description>
 </ModMetaData>
