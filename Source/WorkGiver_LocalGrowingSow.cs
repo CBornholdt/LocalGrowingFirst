@@ -23,8 +23,6 @@ namespace LocalGrowingFirst
 					yield break;
 			}
 
-			Log.Message("Hitting for " + pawn);
-
 			if (growZone.cells.Count == 0)
 			{
 				Log.ErrorOnce("Grow zone has 0 cells: " + growZone, -563487);
@@ -37,7 +35,6 @@ namespace LocalGrowingFirst
 					{
 						for (int k = 0; k < growZone.cells.Count; k++)
 						{
-                            Log.Message("heretoo");
 							yield return growZone.cells[k];
 						}
 						WorkGiver_Grower.wantedPlantDef = null;
