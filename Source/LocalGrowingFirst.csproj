@@ -40,10 +40,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="WorkGiver_LocalGrowingSow.cs" />
-    <Compile Include="WorkGiver_LocalGrowingHarvest.cs" />
     <Compile Include="Utilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkGiver_LocalZoneWrapper.cs" />
+    <Compile Include="GrowingDefWrapper.cs" />
+    <Compile Include="DefModExt_LocalZoneWrapping.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\About\About.xml">
