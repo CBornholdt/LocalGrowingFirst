@@ -35,20 +35,20 @@ namespace LocalGrowingFirst
 		{
 			return wrappedScanner.GetPriority(pawn, t);
 		}
-
-		public override bool HasJobOnCell(Pawn pawn, IntVec3 c)
-		{
-			return wrappedScanner.HasJobOnCell(pawn, c);
-		}
+        
+        public override bool HasJobOnCell(Pawn pawn, IntVec3 c, bool forced = false)
+        {
+            return wrappedScanner.HasJobOnCell(pawn, c, forced);
+        }
 
 		public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
 		{
 			return wrappedScanner.HasJobOnThing(pawn, t, forced);
 		}
 
-		public override Job JobOnCell(Pawn pawn, IntVec3 cell)
+		public override Job JobOnCell(Pawn pawn, IntVec3 cell, bool forced = false)
 		{
-			return wrappedScanner.JobOnCell(pawn, cell);
+			return wrappedScanner.JobOnCell(pawn, cell, forced);
 		}
 
 		public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
@@ -114,12 +114,11 @@ namespace LocalGrowingFirst
 			return wrappedScanner.PotentialWorkThingsGlobal(pawn);
 		}
 
-		public override bool ShouldSkip(Pawn pawn)
+		public override bool ShouldSkip(Pawn pawn, bool forced = false)
 		{
-			if(wrappedScanner == null)
-				CreateWrappedScanner();
-        
-			return wrappedScanner.ShouldSkip(pawn);
+            if(wrappedScanner == null)
+                CreateWrappedScanner();
+			return wrappedScanner.ShouldSkip(pawn, forced);
 		}
 	}
 }
